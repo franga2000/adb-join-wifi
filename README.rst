@@ -35,6 +35,12 @@ To join a password protected wifi network::
     adb shell am start -n com.steinwurf.adbjoinwifi/.MainActivity \
         -e ssid SSID -e password_type WEP|WPA -e password PASSWORD
 
+
+To join a HIDDEN password protected wifi network and close the app::
+
+    adb shell am start -n com.steinwurf.adbjoinwifi/.MainActivity \
+        -e ssid SSID -e password_type WPA -e password PASSWORD --esn hidden --esn leave_app_on_success
+
 To join a wifi network and set a static proxy (with optional bypass list)::
     
     adb shell am start -n com.steinwurf.adbjoinwifi/.MainActivity \
